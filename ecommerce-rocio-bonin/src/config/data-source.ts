@@ -7,10 +7,10 @@ dotenvConfig({ path: '.env.development'});
 const config = {
     type: 'postgres',
     database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
+    host: process.env.POSTGRES_HOST,
     port: process.env.DB_PORT as unknown as number,
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
+    username: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
     autoLoadEntities: true,
     entities: ['dist/**/*.entity{.ts,.js}'],
     migrations: ['dist/migrations/*{.js,.ts}'],
